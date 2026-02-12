@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3 Seatwork 2</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <style>
+        body{
+            background-image: url('https://64.media.tumblr.com/1f3fe621883ed7c3965600dc31e61ea9/29d1efd49b2435a7-f6/s540x810/32de289fc735b5b32a2129529971bee8797c9c17.gif');
+            background-size: cover;
+            background-repeat: no-repeat;  
+          
+        }
+
+        #footer{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+	          font-family: monospace;
+	          text-align: center;
+        }
+
+
+     </style>
+
+</head>
+<body>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: pink; color: white;">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#"><img src="https://www.iconpacks.net/icons/2/free-star-icon-2768-thumb.png" width="50px" height="50px"> </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" href="page2.html" >Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" href="page3.html">Locate</a>
+        </li>
+
+        <br><br>
+
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn" type="button" style=" background-color: white;">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+  <br><br>
+
+  <center>
+  <div class="container row text-center" style="color: pink; background-color: rgba(250, 250, 250, 0.703);">
+    <p class="fw-bold display-5"> Do you want a new make-up set?</p>
+
+     <details class="ontoggle">
+        <summary>Click here for more info!</summary>
+        <p id="instructions"></p>
+      </details>
+
+  <br><br>
+
+
+
+    <form action="#">
+    <label for="">What's your budget?</label>
+        <input type="number" id="num1" class="form-control" placeholder="Type here..." required>
+
+  </div>
+
+  <br><br>
+
+  <div class="container">
+  <div class="row">
+    <div class="col">
+
+      <button class="btn" style="background-color: white; width: auto;">Brands and Discounts</button>
+
+      <br><br>
+
+      <h6 style="background-color: beige;">Recommended Brands:</h6>
+
+      <button class="btn" style="background-color: rgb(234, 181, 181);" >Happy Skin</button>
+
+      <br>
+
+      <button class="btn" style="background-color:rgb(234, 181, 181);" >BLK Cosmetics</button>
+
+      <br>
+
+      <button class="btn" style="background-color: rgb(234, 181, 181);">Grwm</button>
+
+      <br>
+
+      <button type="submit" class="btn" style="background-color: antiquewhite;" id="discount" onclick="calculate()">Find</button>
+  <p id="brand"></p>
+    </div>
+
+    <div class="col">
+   
+      <button type="submit" class="btn" style="background-color: antiquewhite;"onclick="revealBrand()">Products</button>
+
+
+    </div>
+  </div>
+
+  </div>
+  </center>
+
+
+
+
+  <script>
+    document.getElementById("instructions").innerHTML = "Enter a budget and let's find the one for you!";
+
+    function calculate(){
+      var num1 = document.getElementById('num1').value;
+      var discount = (num1)- 50 * 2;
+      var finalPrice = discount.toFixed(2);
+   
+       document.getElementById('brand').innerHTML = "<br><b style='color: white; Recommended Brands:</br>"
+        + 
+        "<p>Happy Skin</p><br>"
+
+        +"<kbd>" + finalPrice + "</kbd>";
+    }
+
+
+  </script>
+
+      <button type="button" style="background-color: rgb(237, 157, 157)" class="btn" onclick="window.location.reload()">Refresh</button>
+
+</div>
+
+    <div id="footer" style="background-color: rgb(230, 155, 180); text-align: center; color: white;">
+	<p> © 2026 Seatwork 2 ┃ Created by Shari Cruz, 9 - Emerald </p>
+
+</div>
+
+</body>
+
+</html>
