@@ -13,6 +13,7 @@
             background-size: cover;
             background-repeat: no-repeat;  
           
+          
         }
 
         #footer{
@@ -22,6 +23,7 @@
             width: 100%;
 	          font-family: monospace;
 	          text-align: center;
+            
         }
 
 
@@ -47,7 +49,7 @@
           <a class="nav-link" style="color: white;" href="page2.html" >Shop</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color: white;" href="page3.html">Locate</a>
+          <a class="nav-link" style="color: white;" href="page3.html">Others</a>
         </li>
 
         <br><br>
@@ -65,7 +67,7 @@
   <br><br>
 
   <center>
-  <div class="container row text-center" style="color: pink; background-color: rgba(250, 250, 250, 0.703);">
+  <div class="container row text-center" style="color: pink; background-color: rgba(250, 250, 250, 0.703); height: auto; ">
     <p class="fw-bold display-5"> Do you want a new make-up set?</p>
 
      <details class="ontoggle">
@@ -75,77 +77,82 @@
 
   <br><br>
 
-
-
     <form action="#">
     <label for="">What's your budget?</label>
         <input type="number" id="num1" class="form-control" placeholder="Type here..." required>
 
-  </div>
+        <button type="submit" class="btn" style="background-color: rgb(244, 158, 158); color: rgb(255, 255, 255);" id="discount" onclick="calculate()">Find</button>
+        
+    <button type="button" style="background-color: rgb(237, 157, 157)" class="btn btn-primary" onclick="window.location.reload()">Refresh</button>
 
-  <br><br>
+    <br><br>
 
-  <div class="container">
-  <div class="row">
-    <div class="col">
-
-      <button class="btn" style="background-color: white; width: auto;">Brands and Discounts</button>
-
-      <br><br>
-
-      <h6 style="background-color: beige;">Recommended Brands:</h6>
-
-      <button class="btn" style="background-color: rgb(234, 181, 181);" >Happy Skin</button>
-
-      <br>
-
-      <button class="btn" style="background-color:rgb(234, 181, 181);" >BLK Cosmetics</button>
-
-      <br>
-
-      <button class="btn" style="background-color: rgb(234, 181, 181);">Grwm</button>
-
-      <br>
-
-      <button type="submit" class="btn" style="background-color: antiquewhite;" id="discount" onclick="calculate()">Find</button>
-  <p id="brand"></p>
-    </div>
-
-    <div class="col">
-   
-      <button type="submit" class="btn" style="background-color: antiquewhite;"onclick="revealBrand()">Products</button>
-
-
-    </div>
-  </div>
+     <p id="price" style="color: pink;"></p>
+     
+      <p id="brand"></p>
 
   </div>
-  </center>
 
-
-
-
+  
   <script>
     document.getElementById("instructions").innerHTML = "Enter a budget and let's find the one for you!";
 
     function calculate(){
       var num1 = document.getElementById('num1').value;
-      var discount = (num1)- 50 * 2;
-      var finalPrice = discount.toFixed(2);
-   
-       document.getElementById('brand').innerHTML = "<br><b style='color: white; Recommended Brands:</br>"
-        + 
-        "<p>Happy Skin</p><br>"
+      var disc = num1 - (50 * 2);
+      var price = disc.toFixed(2);
 
-        +"<kbd>" + finalPrice + "</kbd>";
+      document.getElementById('price').innerHTML = "Your discount is " + price;
+       document.getElementById('brand').innerHTML = "<br><b style='color: pink; Recommended Brands:<br>"
+       +
+       "<br><h6 style='background-color: beige;'>Recommended Brands:</h6><br><button class='btn' style='background-color: rgb(234, 181, 181);'>Happy Skin</button><br><button class='btn' style='background-color:rgb(234, 181, 181);'>BLK Cosmetics</button><br><button class='btn' style='background-color: rgb(234, 181, 181);'>Grwm</button>";
     }
 
 
   </script>
 
-      <button type="button" style="background-color: rgb(237, 157, 157)" class="btn" onclick="window.location.reload()">Refresh</button>
+  <br><br>
+
+  <div class="container" style="margin-bottom: 100px;">
+    <div class="row">
+
+        <button type="submit" class="btn" style="background-color: rgb(250, 215, 236); color: palevioletred;"onclick="revealBrand()">Store Locator</button>
+
+    </div>
+
+    <br><br>
+
+    <div class="row">
+
+      <div class="col image-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKMCYLPF2ZeOLju9iHYDTSQU7Z_ofwLwJI-A&s" alt="HappySkin"; width="100"; height="100" id="revealBrand">
+        <h6 style="color: palevioletred" >Happy Skin</h6>
+        <p>SM Fairview, Upper Ground Level, Central Walk</p>
+     </div>
+
+      <div class="col">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZo08Q2aIXJ60s35iyoGw_eMllspKHSptHyg&s" alt="HappySkin"; width="100"; height="100" id="revealBrand">
+       <h6 style="color: palevioletred" >Blk Cosmetics</h6>
+        <p>SM Fairview, Upper Ground Level, Central Walk</p>
+     </div>
+
+      <div class="col">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5dK_Fg_MiCJyXKjnJTd8jlfHLkm95I2JIvA&s" alt="HappySkin"; width="100"; height="100" id="revealBrand">
+       <h6 style="color: palevioletred" >Grwm Cosmetics</h6>
+        <p>Second Floor, Main Mall, SM North EDSA (near IMAX)</p>
+      </div>
+
+    </div>
+
+  </div>
 
 </div>
+
+  </div>
+</center>
+
+</div>
+
 
     <div id="footer" style="background-color: rgb(230, 155, 180); text-align: center; color: white;">
 	<p> © 2026 Seatwork 2 ┃ Created by Shari Cruz, 9 - Emerald </p>
